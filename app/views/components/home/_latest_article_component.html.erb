@@ -1,0 +1,22 @@
+<!-- ------card-3-start------ -->
+<div class=" w-full h-auto  font-custom">
+  <div class=" lg:ml-44 py-20">
+    <div class=" text-center lg:block lg:text-left">
+      <h1 class="text-blackc "><%=t :latest_title %></h1>
+    </div>
+  </div>
+  <div class="grid grid-cols-1 lg:grid-cols-4 gap-4  lg:left-5 lg:mx-40 pb-28">
+
+    <% latest_article_list.each  do |item| %>
+    <div class="mx-10 lg:mx-0">
+        <div class="m-auto bg-bcolor rounded-md max-w-md">
+          <img src="<%= item[:image] %>" class=" card__round w-full" >
+          <h2 class="card2__title "><%= item[:author] %></h2>
+          <a href="#"><h5 class="card2__text "><%= item[:title] %></h5> </a>
+          <p class="card2__text2Mobile card2__text2"><%= item[:description] %></p>
+        </div>
+    </div>
+    <% end %>
+  </div>
+</div>
+<!-- ------card-3-end------ -->

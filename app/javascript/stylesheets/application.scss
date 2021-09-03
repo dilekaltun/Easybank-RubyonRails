@@ -1,0 +1,121 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+
+}
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%;
+  rounded: 25px;
+}
+
+.checkbox-round {
+  width: 1.3em;
+  height: 1.3em;
+  background-color: white;
+  border-radius: 50%;
+  vertical-align: middle;
+  border: 2px solid #ddd;
+  appearance: none;
+  -webkit-appearance: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.checkbox-round:checked {
+  background: linear-gradient(270deg, #2BB7DA 0%, #31D35C 100%);
+}
+
+h1{
+  @apply font-normal text-5xl tracking-widest
+}
+
+h5{
+  @apply font-normal text-lg tracking-wide
+}
+.p-font{
+  @apply font-normal text-xs
+}
+.menu{
+  @apply py-5 px-3  text-gray-400 font-custom  transition duration-300
+}
+.menu:hover{
+  @apply text-gray-700 border-b-4 border-green-500
+}
+.btn{
+  @apply py-2 px-4 font-medium text-white rounded-full bg-ozelgradient  font-custom text-base
+}
+.btn:hover{
+  @apply bg-hoverozelgradient
+}
+
+
+.card__titleMobile{
+  @apply text-center font-custom pt-8
+}
+.card__textMobile{
+  @apply text-center pt-5 text-gray-500
+}
+.card2__title{
+  @apply font-custom pt-9 pl-6 p-font text-fcolor
+}
+.card2__text{
+  @apply text-left font-custom pt-3 pl-6
+}
+.card2__text:hover{
+  @apply text-green-600
+}
+
+
+.card2__text2Mobile{
+  @apply text-justify pt-5 mx-5  pl-2 p-font pb-10 text-fcolor
+}
+.card__round{
+  @apply rounded-t-md h-48
+}
+
+.footer__svg:hover{
+  @apply fill-current text-iconColor
+}
+.footer__title{
+  @apply text-white
+}
+.footer__title:hover{
+  @apply text-green-600
+}
+.homeImage{
+  @apply hidden lg:block
+}
+.homeImageMobile{
+  @apply block lg:hidden
+}
+
+// Large Screen
+@screen lg {
+  .card2__text2{
+    @apply text-left pt-5  pl-2 p-font pb-10 text-fcolor
+  }
+  .card__title{
+    @apply text-left font-custom pt-8
+  }
+  .card__text{
+    @apply text-left pt-5 text-gray-500
+  }
+
+}

@@ -1,0 +1,29 @@
+<!-- ------card-2-start------ -->
+<div class=" w-full h-auto bg-bcolor font-custom">
+  <div class=" lg:ml-44 py-20">
+    <div class="text-center lg:block lg:text-left font-custom">
+      <h1 class="text-blackc  text-3xl"><%=t :why_choose_title %></h1>
+      <p class="pt-8 font-normal text-gray-500 text-justify px-5 lg:px-0 md:text-center lg:text-left w-cardWidth">
+        <%=t :why_choose_content %>
+      </p>
+    </div>
+  </div>
+
+
+
+
+  <div class="grid grid-cols-1 lg:grid-cols-4 gap-1  text-center lg:mx-40  pb-28">
+    <% why_choose_list.each do |item| %>
+      <div class="pb-16 lg:pb-0">
+        <div class="flex lg:grid">
+          <div class="m-auto lg:m-0">
+            <img src="<%= item[:image] %>" />
+          </div>
+        </div>
+        <h5 class="card__titleMobile card__title"><%= item[:title] %></h5>
+        <p class="card__textMobile w-auto mx-3 lg:mx-0  lg:mr-10 card__text"><%= item[:description] %></p>
+      </div>
+    <% end %>
+  </div>
+</div>
+<!-- ------card-2-end------ -->
